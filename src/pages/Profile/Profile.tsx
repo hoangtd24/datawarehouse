@@ -58,12 +58,23 @@ const Profile = () => {
     setPage(value);
   };
   const getPosts = async () => {
+    const params: {
+      page: number;
+      title?: string;
+      tags?: string;
+    } = {
+      page: 1,
+    };
+    params.page = page;
+    if (title) {
+      console.log(title);
+      params.title = title;
+    }
+    if (tag) {
+      params.tags = tag;
+    }
     const result = await api.get("posts", {
-      params: {
-        page,
-        title,
-        tags: tag,
-      },
+      params: params,
     });
     if (result.status === 200) {
       setPosts(result.data?.posts);
