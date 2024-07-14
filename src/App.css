@@ -1,0 +1,101 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #9c69e2;
+  --white: white;
+  --text-color: #161823;
+  --black: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+ul,
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/AvenirLTStd-Heavy.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/AvenirLTStd-Medium.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("/assets/fonts/AvenirLTStd-Light.otf");
+  font-weight: 300;
+}
+
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+  }
+
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-content {
+    padding: 8px 9px;
+  }
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.prev,
+.next > img {
+  width: 38px;
+}
+
+.prev {
+  left: -66px;
+}
+
+.next {
+  right: -64px;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 32px;
+}

@@ -1,0 +1,259 @@
+.sidenav {
+  height: 100%;
+  width: 16vw;
+  min-width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.menu_icon {
+  position: fixed;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #e9e9e9;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.sidenav_small {
+  display: none;
+  height: 100%;
+  width: 16vw;
+  min-width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav button {
+  padding: 8px 8px 8px 24px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #212353;
+  display: block;
+  font-style: "Inter";
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: var(--primary-color);
+}
+
+.sidebar-action {
+  margin-top: 16px;
+}
+.main {
+  margin-left: 16vw; /* Same as the width of the sidenav */
+  padding: 0px 5vw;
+  background-color: #fff;
+}
+.actions {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addnew-btn {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Inter;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 18px 78px;
+  border-radius: 50px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.search_wrap {
+  display: flex;
+  gap: 16px;
+  & input,
+  select {
+    width: 18vw;
+    min-width: 120px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background: #fdfdfd;
+    border: 1px solid #000000;
+    font-size: 16px;
+  }
+}
+
+.table {
+  width: 100%;
+  background-color: #d9d9d9;
+  margin-top: 32px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 2px 4px;
+  font-size: 20px;
+}
+
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.edit-btn {
+  cursor: pointer;
+  & img {
+    width: 30px;
+  }
+}
+
+.delete-btn {
+  margin-left: 12px;
+  cursor: pointer;
+
+  & img {
+    width: 30px;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 46px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #dadada;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & label {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    letter-spacing: 0.005em;
+    text-align: left;
+  }
+
+  & .input {
+    border: 1px solid #000000;
+    height: 32px;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+}
+
+.submit_btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  margin-top: 36px;
+  cursor: pointer;
+}
+
+.cancel_btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  color: white;
+  background-color: #ccc;
+  border-radius: 50px;
+  margin-top: 36px;
+  cursor: pointer;
+}
+
+.input-item {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .sidenav {
+    display: none;
+  }
+  .sidenav_small {
+    display: block;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .addnew-btn {
+    padding: 2.2vw 5vw;
+  }
+  .sidebar-action button {
+    padding: 8px 8px 8px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #212353;
+    display: block;
+    font-style: "Inter";
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+}
